@@ -6,7 +6,7 @@ const data = require('./data-db');
 
 async function main() {
     await mongoose.connect('mongodb://192.168.0.17:27017/nodepop-app');
-    await Ad.collection.drop();
+    await Ad.collection.drop().catch(() => {});
 
     for(let i=0;i< data.length;i++) {
         const ad = data[i];
