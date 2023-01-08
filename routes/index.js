@@ -1,8 +1,9 @@
-const adsRouter = require("./ads")
-const express = require('express');
+const adsRouter = require("./ads");
+const tagsRouter = require("./tags");
+const express = require("express");
 const router = express.Router();
 
-/* GET home page. */
-router.use('/ads', adsRouter);
+router.use("/ads", adsRouter);
+router.use("/tags", tagsRouter);
 
 module.exports = router;
