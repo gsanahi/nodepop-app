@@ -1,73 +1,65 @@
 module.exports = [
-    {
-      sale: true,
-      price: 743,
-      name: "Computer",
-      tags: ["work"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: false,
-      price: 830,
-      name: "Tent",
-      tags: ["lifetime"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: true,
-      price: 401,
-      name: "Audi3000",
-      tags: ['motor'],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: true,
-      price: 330,
-      name: "Xiaomi 12pro",
-      tags: ["mobile"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: false,
-      price: 90,
-      name: "Ball",
-      tags: ["lifetime"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: true,
-      price: 903,
-      name: "whiteboard",
-      tags: ["work"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: false,
-      price: 603,
-      name: "MotoG3",
-      tags: ["mobile"],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: true,
-      price: 401,
-      name: "C3",
-      tags: ['motor'],
-      photo: "https://loremflickr.com/640/480",
-      
-    },
-    {
-      sale: true,
-      price: 500,
-      name: "Tennis tent",
-      tags: ["lifetime"],
-      photo: "https://loremflickr.com/640/480",
-      
-    }];
+  {
+    sale: true,
+    price: 743,
+    name: "Computer",
+    tags: ["work"],
+    photo: "computer.jpg",
+  },
+  {
+    sale: false,
+    price: 830,
+    name: "Tent",
+    tags: ["lifetime"],
+    photo: "tent.jpg",
+  },
+  {
+    sale: true,
+    price: 401,
+    name: "Audi3000",
+    tags: ["motor"],
+    photo: "audi.jpg",
+  },
+  {
+    sale: true,
+    price: 330,
+    name: "Xiaomi 12pro",
+    tags: ["mobile"],
+    photo: "mobile.jpg",
+  },
+  {
+    sale: false,
+    price: 90,
+    name: "Ball",
+    tags: ["lifetime"],
+    photo: "ball.jpg",
+  },
+  {
+    sale: true,
+    price: 903,
+    name: "whiteboard",
+    tags: ["work"],
+    photo: "whiteboard.jpg",
+  },
+  {
+    sale: false,
+    price: 603,
+    name: "MotoG3",
+    tags: ["mobile"],
+    photo: "motog3.jpg",
+  },
+  {
+    sale: true,
+    price: 401,
+    name: "C3",
+    tags: ["motor"],
+    photo: "carC3.jpg",
+  },
+  {
+    sale: true,
+    price: 500,
+    name: "Tennis tent",
+    tags: ["lifetime"],
+    photo: "tennis.jpg",
+  },
+];
