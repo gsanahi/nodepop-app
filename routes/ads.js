@@ -1,5 +1,6 @@
 const express = require('express');
-const {search, findById } = require('../repositories/ads');
+const {create, search, findById } = require('../repositories/ads');
+const myTags = require('../models/tags');
 const router = express.Router();
 
 router.get('/list', async (req, res, next) => {
@@ -46,7 +47,37 @@ router.get('/:id',async (req,res,next) => {
     next(err)
   }    
 });
-   
+
+router.post('/', async (req, res, next) => {
+  try {
+    const {name, price, sale, tags, photo} = req.body;
+    let error;
+    if (!name) {
+      error = 'Nombre inválido';
+    }
+    if (typeof price != 'number' || price < 0) {
+      error = 'Precio inválido';
+    }
+    if (sale !== true && sale !== false) {
+      error = 'Venta inválida';
+    }
+    if (!Array.isArray(tags) || !tags.every(tag => myTags.includes(tag))) {
+      error = 'Tag inválido';
+    }
+    if (!photo) {
+      error = 'Foto inválida';
+    }
+    if (error) {
+      res.status(400).json({error});
+      next();
+    }
+
+    const ad = await create(name, price, sale, tags, photo)
+    res.json(ad);
+  } catch(err) {
+    next(err);
+  }
+})
   
-  module.exports = router;
+module.exports = router;
   
