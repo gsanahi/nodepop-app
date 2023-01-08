@@ -2,8 +2,8 @@ const Ad = require("../models/ad");
 
 // Funcion que me crea un Ad
 function create(name, price, sale, tags, photo) {
-    const ad = new Ad({ name, price, sale, tags, photo });
-    return ad.save();
+  const ad = new Ad({ name, price, sale, tags, photo });
+  return ad.save();
 }
 
 // Funcion que me va a dar el listado de todos los anuncios filtrados

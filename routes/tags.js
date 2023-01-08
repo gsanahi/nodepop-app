@@ -1,9 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const tags = require('../models/tags')
+const tags = require("../models/tags");
 
-router.get('/list', (req, res) => {
-    res.json(tags);
-})
+// ruta que me devuelve la lista de tags
+router.get("/list", (req, res) => {
+  res.json(tags);
+});
 
 module.exports = router;
