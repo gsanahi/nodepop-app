@@ -3,8 +3,7 @@ const {search, findById } = require('../repositories/ads');
 const router = express.Router();
 
 router.get('/list', async (req, res, next) => {
-    // {minPrice: 100,, maxPrice: 500}
-    try{
+      try{
       const {price, name, tag, sale, start, limit, sort} = req.query;
       let fixedPrice, minPrice, maxPrice; 
       if (price) {

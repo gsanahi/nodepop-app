@@ -18,7 +18,7 @@ module.exports = [
     {
       sale: true,
       price: 401,
-      name: "Audio3000",
+      name: "Audi3000",
       tags: ['motor'],
       photo: "https://loremflickr.com/640/480",
       
