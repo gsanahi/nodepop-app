@@ -9,7 +9,7 @@ const Ad = require("../models/ad");
 const data = require("./data-db");
 
 async function main() {
-  await mongoose.connect("mongodb://192.168.0.17:27017/nodepop-app");
+  await mongoose.connect("mongodb://127.0.0.1:27017/nodepop-app");
   // limpiar base de datos antes de inicializarla
   await Ad.collection.drop().catch(() => {});
 
