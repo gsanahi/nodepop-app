@@ -3,26 +3,26 @@ const mongoose = require("mongoose");
 const adSchema = new mongoose.Schema({
   name: {
     type: String,
-    require: true,
+    required: true,
     index: true,
   },
   sale: {
     type: Boolean,
-    require: true,
+    required: true,
     index: true,
   },
   price: {
     type: Number,
-    require: true,
+    required: true,
     index: true,
   },
   photo: {
     type: String,
-    require: false,
+    required: false,
   },
   tags: {
     type: [String],
-    require: false,
+    required: false,
     index: true,
   },
 });

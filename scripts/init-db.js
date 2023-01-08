@@ -1,9 +1,12 @@
-// getting-started.js
 const mongoose = require("mongoose");
+// elimino el warning de mongoose
 mongoose.set("strictQuery", true);
+
+// modelo de mongoose
 const Ad = require("../models/ad");
+
+// array de objetos
 const data = require("./data-db");
-//array de objetos
 
 async function main() {
   await mongoose.connect("mongodb://192.168.0.17:27017/nodepop-app");
@@ -14,11 +17,7 @@ async function main() {
   await Ad.ensureIndexes();
 
   // agrego los ads
-  for (let i = 0; i < data.length; i++) {
-    const ad = data[i];
-    const adNew = new Ad(ad);
-    await adNew.save();
-  }
+  await Ad.insertMany(data);
 
   mongoose.disconnect();
 }
